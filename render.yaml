@@ -3,3 +3,10 @@ services:
   name: rabbitmq
   env: docker
   plan: free
+  envVars:
+  - key: RABBITMQ_ERLANG_COOKIE
+    generateValue: true
+  - key: RABBITMQ_DEFAULT_USER
+    value: rabbitmq
+  - key: RABBITMQ_DEFAULT_PASS
+    generateValue: true
